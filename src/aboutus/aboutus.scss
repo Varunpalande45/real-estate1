@@ -1,0 +1,45 @@
+/* AboutUs.scss */
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 1.8em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  
+    .mission-section,
+    .team-section,
+    .values-section,
+    .contact-section {
+      margin-bottom: 30px;
+    }
+  
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  

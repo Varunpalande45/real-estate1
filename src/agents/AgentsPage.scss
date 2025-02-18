@@ -1,0 +1,178 @@
+/* AgentPage.scss */
+
+/* General Styles for Agent Page */
+.agent-page {
+    padding: 3rem;
+    background-color: #f9f9f9;
+  }
+  
+  .agent-page h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Grid Layout for Agent Cards */
+  .agents-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center; /* Centers the cards in each column */
+  }
+  
+  /* Styling for Individual Agent Cards */
+  .agent-card {
+    background-color: rgb(253, 200, 200);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures card content is vertically spaced well */
+    position: relative;
+    width: 100%; /* Ensures responsive design on smaller screens */
+    
+    /* Hover Effect */
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Profile Image Styling */
+    .agent-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 5px solid #f0f0f0;
+    }
+  
+    /* Agent Name Styling */
+    .agent-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+  
+    /* Bio for Each Agent */
+    .agent-bio {
+      font-size: 1rem;
+      color: #777;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Overlay for Detailed Agent View */
+  .agent-details-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  /* Detailed Agent Info Styling */
+  .agent-details {
+    background-color: #fff;
+    padding: 3rem;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #333;
+    }
+  
+    /* Agent Image on Detailed View */
+    .agent-details-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+    }
+  
+    /* Name in Detailed View */
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+  
+    /* Bio/Text in Detailed View */
+    .agent-details-bio {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  /* Responsive Design: Ensure the page looks good on smaller devices */
+  @media (max-width: 768px) {
+    .agent-page h1 {
+      font-size: 2rem;
+    }
+  
+    .agent-card {
+      padding: 1.5rem;
+    }
+  
+    .agent-name {
+      font-size: 1.5rem;
+    }
+  
+    .agent-bio {
+      font-size: 0.9rem;
+    }
+  
+    .agent-details {
+      padding: 2rem;
+    }
+  
+    .agent-details-bio {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .agent-page {
+      padding: 1.5rem;
+    }
+  
+    .agents-list {
+      grid-template-columns: 1fr; /* Stacks agent cards on small screens */
+    }
+  
+    .agent-card {
+      padding: 1rem;
+    }
+  
+    .agent-details {
+      padding: 1.5rem;
+    }
+  }
+  
